@@ -1,8 +1,12 @@
 const express = require('express');
-
 const app = express();
-
 const bcrypt = require('bcrypt');
+const passport = require('passport');
+
+const initializePassport = require('./passport-config');
+initializePassport(passport);
+
+
 
 const users = [];
 
